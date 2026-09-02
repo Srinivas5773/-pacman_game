@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>PAC-MAN Arcade</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ffe600'/><polygon points='50,50 100,20 100,80' fill='%23000'/></svg>">
+</head>
+<body>
+
+  <main class="arcade-container">
+    
+    <!-- Top Retro Arcade Scoreboard -->
+    <header class="scoreboard">
+      <div class="score-box left">
+        <span class="score-title">1UP</span>
+        <span id="scoreDisplay" class="score-val">00</span>
+      </div>
+      <div class="score-box right">
+        <span class="score-title">HIGH SCORE</span>
+        <span id="highScoreDisplay" class="high-score-val">10000</span>
+      </div>
+    </header>
+
+    <!-- Game Screen Canvas -->
+    <div class="canvas-wrap" id="canvasWrap">
+      <canvas id="gameCanvas" width="448" height="496"></canvas>
+    </div>
+
+    <!-- Bottom HUD: Lives & Stage Fruit -->
+    <footer class="bottom-bar">
+      <div class="lives-tray" id="livesTray">
+        <span class="life-icon"></span>
+        <span class="life-icon"></span>
+        <span class="life-icon"></span>
+      </div>
+      <div class="fruit-tray">
+        <span id="stageFruit">🍒</span>
+      </div>
+    </footer>
+
+    <!-- Controls Bar -->
+    <div class="control-bar">
+      <button id="btnSound" class="btn-arcade">🔊 SOUND ON</button>
+      <button id="btnRestart" class="btn-arcade">🔄 RESTART</button>
+    </div>
+
+    <!-- Mobile Touch D-Pad -->
+    <div class="mobile-controls">
+      <div class="dpad-row">
+        <button class="dpad-btn" id="btnUp">▲</button>
+      </div>
+      <div class="dpad-row">
+        <button class="dpad-btn" id="btnLeft">◀</button>
+        <button class="dpad-btn" id="btnDown">▼</button>
+        <button class="dpad-btn" id="btnRight">▶</button>
+      </div>
+    </div>
+
+    <div class="instructions-hint">
+      ARROWS / WASD / SWIPE TO MOVE &bull; SPACE OR P TO PAUSE
+    </div>
+
+  </main>
+
+  <!-- Core Game Engine Scripts -->
+  <script src="js/constants.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/fruit.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/pacman.js"></script>
+  <script src="js/ghosts.js"></script>
+  <script src="js/game.js"></script>
+
+</body>
+</html>

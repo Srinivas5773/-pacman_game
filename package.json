@@ -1,0 +1,23 @@
+{
+  "name": "pacman-arcade-game",
+  "version": "1.0.0",
+  "description": "Retro Arcade Pac-Man Game with 60FPS Canvas Engine, 4 Ghost AI Personalities, Web Audio Synth, Custom Maze Editor, and 55,000+ Lines of Modular Code",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "generate-data": "node scripts/generate_55k_dataset.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/run_tests.js"
+  },
+  "keywords": [
+    "pacman",
+    "arcade-game",
+    "retro-game",
+    "canvas-2d",
+    "ghost-ai",
+    "web-audio-api",
+    "javascript-game"
+  ],
+  "author": "Srinivas",
+  "license": "MIT"
+}

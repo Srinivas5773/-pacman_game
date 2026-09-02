@@ -1,0 +1,205 @@
+/* ==========================================================================
+   CLASSIC PAC-MAN ARCADE STYLESHEET
+   Clean, authentic retro arcade design
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+/* Main Arcade Container */
+.arcade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* Top Arcade Scoreboard */
+.scoreboard {
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px 10px 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.score-box.left {
+  text-align: left;
+}
+
+.score-box.right {
+  text-align: right;
+}
+
+.score-title {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.score-val {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.high-score-val {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+/* Game Canvas Frame */
+.canvas-wrap {
+  position: relative;
+  width: 448px;
+  height: 496px;
+  max-width: 100%;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#gameCanvas {
+  display: block;
+  background: #000000;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 448 / 496;
+}
+
+/* Bottom HUD: Lives & Fruit */
+.bottom-bar {
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 11px;
+}
+
+.lives-tray {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.life-icon {
+  width: 16px;
+  height: 16px;
+  background: #ffe600;
+  border-radius: 50%;
+  clip-path: polygon(100% 25%, 50% 50%, 100% 75%, 100% 100%, 0% 100%, 0% 0%);
+  display: inline-block;
+}
+
+.fruit-tray {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+}
+
+/* Sound and Control Toolbar */
+.control-bar {
+  margin-top: 8px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-arcade {
+  background: #111122;
+  color: #ffe600;
+  border: 1px solid #333366;
+  padding: 6px 14px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.btn-arcade:hover {
+  background: #ffe600;
+  color: #000000;
+}
+
+/* Touch On-Screen Controls for Mobile */
+.mobile-controls {
+  display: none;
+  margin-top: 12px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  .mobile-controls {
+    display: flex;
+  }
+}
+
+.dpad-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dpad-btn {
+  width: 52px;
+  height: 52px;
+  background: #181c3a;
+  border: 2px solid #2a3568;
+  color: #ffe600;
+  font-size: 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.dpad-btn:active {
+  background: #ffe600;
+  color: #000000;
+}
+
+.instructions-hint {
+  font-size: 8px;
+  color: #666688;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.5;
+}
